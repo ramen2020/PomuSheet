@@ -14,6 +14,11 @@
 		66C695F5277AF73D00184173 /* PomuSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C695F4277AF73D00184173 /* PomuSheetTests.swift */; };
 		66C695FF277AF73D00184173 /* PomuSheetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C695FE277AF73D00184173 /* PomuSheetUITests.swift */; };
 		66C69601277AF73D00184173 /* PomuSheetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C69600277AF73D00184173 /* PomuSheetUITestsLaunchTests.swift */; };
+		66C6960F277AF84400184173 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C6960E277AF84400184173 /* Extension+View.swift */; };
+		66C69613277AF88300184173 /* PomuSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C69612277AF88300184173 /* PomuSheetManager.swift */; };
+		66C69615277AF8B900184173 /* PomuPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C69614277AF8B900184173 /* PomuPresentationController.swift */; };
+		66C6961B277AF97A00184173 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C6961A277AF97A00184173 /* ExampleView.swift */; };
+		66C6961E277B0D2200184173 /* full_speed.sh in Resources */ = {isa = PBXBuildFile; fileRef = 66C6961C277B0C8D00184173 /* full_speed.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		66C695FA277AF73D00184173 /* PomuSheetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomuSheetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C695FE277AF73D00184173 /* PomuSheetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomuSheetUITests.swift; sourceTree = "<group>"; };
 		66C69600277AF73D00184173 /* PomuSheetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomuSheetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		66C6960E277AF84400184173 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
+		66C69612277AF88300184173 /* PomuSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomuSheetManager.swift; sourceTree = "<group>"; };
+		66C69614277AF8B900184173 /* PomuPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomuPresentationController.swift; sourceTree = "<group>"; };
+		66C6961A277AF97A00184173 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		66C6961C277B0C8D00184173 /* full_speed.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = full_speed.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 		66C695D7277AF73B00184173 = {
 			isa = PBXGroup;
 			children = (
+				66C6961C277B0C8D00184173 /* full_speed.sh */,
 				66C695E2277AF73B00184173 /* PomuSheet */,
 				66C695F3277AF73D00184173 /* PomuSheetTests */,
 				66C695FD277AF73D00184173 /* PomuSheetUITests */,
@@ -94,6 +105,8 @@
 		66C695E2277AF73B00184173 /* PomuSheet */ = {
 			isa = PBXGroup;
 			children = (
+				66C69619277AF95600184173 /* Example */,
+				66C69611277AF86700184173 /* Source */,
 				66C695E3277AF73B00184173 /* PomuSheetApp.swift */,
 				66C695E5277AF73B00184173 /* ContentView.swift */,
 				66C695E7277AF73D00184173 /* Assets.xcassets */,
@@ -125,6 +138,48 @@
 				66C69600277AF73D00184173 /* PomuSheetUITestsLaunchTests.swift */,
 			);
 			path = PomuSheetUITests;
+			sourceTree = "<group>";
+		};
+		66C6960D277AF81F00184173 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				66C6960E277AF84400184173 /* Extension+View.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		66C69610277AF85D00184173 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				66C69612277AF88300184173 /* PomuSheetManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		66C69611277AF86700184173 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				66C69618277AF8CD00184173 /* Controller */,
+				66C6960D277AF81F00184173 /* Extension */,
+				66C69610277AF85D00184173 /* Manager */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		66C69618277AF8CD00184173 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66C69614277AF8B900184173 /* PomuPresentationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		66C69619277AF95600184173 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				66C6961A277AF97A00184173 /* ExampleView.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C6961E277B0D2200184173 /* full_speed.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C695E6277AF73B00184173 /* ContentView.swift in Sources */,
+				66C69615277AF8B900184173 /* PomuPresentationController.swift in Sources */,
+				66C6960F277AF84400184173 /* Extension+View.swift in Sources */,
+				66C69613277AF88300184173 /* PomuSheetManager.swift in Sources */,
 				66C695E4277AF73B00184173 /* PomuSheetApp.swift in Sources */,
+				66C6961B277AF97A00184173 /* ExampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
