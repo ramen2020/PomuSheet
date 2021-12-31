@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct ExampleView: View {
+    
+    @State var isPresented: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct ExampleView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExampleView()
+        NavigationView {
+            VStack {
+                Button {
+                    isPresented.toggle()
+                } label: {
+                    Text("open PomuSheet")
+                }
+                .pomuSheet(isPresented: $isPresented) {
+                    VStack(spacing: 20) {
+                        Text("Welcome PomuSheet")
+                            .font(.title.bold())
+                        Button {
+                            isPresented.toggle()
+                        } label: {
+                            Text("dissmiss")
+                        }
+                    }
+                } dissmiss: {
+                    print("Dismissed")
+                }
+            }
+            .navigationBarTitle(Text("PomuSheet"), displayMode: .large)
+        }
     }
 }
