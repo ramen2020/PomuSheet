@@ -19,7 +19,7 @@ struct ExampleView: View {
                 } label: {
                     Text("open PomuSheet")
                 }
-                .pomuSheet(isPresented: $isPresented) {
+                .pomuSheet(isPresented: $isPresented, backgroundColor: UIColor.lightGray) {
                     VStack(spacing: 20) {
                         Text("Welcome PomuSheet")
                             .font(.title.bold())
