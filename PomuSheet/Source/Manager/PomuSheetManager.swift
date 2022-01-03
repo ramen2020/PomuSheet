@@ -10,6 +10,7 @@ import SwiftUI
 struct PomuSheetManager<Content: View> : UIViewControllerRepresentable {
     
     @Binding var isPresented: Bool
+    var backgroundColor: UIColor
     var content: Content
     var dissmiss: () -> Void
     let controller = UIViewController()
@@ -26,7 +27,7 @@ struct PomuSheetManager<Content: View> : UIViewControllerRepresentable {
         if isPresented {
             let pomuSheetVC = PomuPresentationController(rootView: content)
             pomuSheetVC.presentationController?.delegate = context.coordinator
-            pomuSheetVC.view.backgroundColor = UIColor.white
+            pomuSheetVC.view.backgroundColor = self.backgroundColor
             vc.present(pomuSheetVC, animated: true)
         } else {
             closeAction()
