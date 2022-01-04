@@ -8,8 +8,13 @@
 import SwiftUI
 
 extension View {
-    func pomuSheet<Content: View>(isPresented: Binding<Bool>, backgroundColor: UIColor = UIColor.white, @ViewBuilder content: @escaping() -> Content, dissmiss: @escaping ()->())-> some View {
-
+    func pomuSheet<Content: View>(
+        isPresented: Binding<Bool>,
+        backgroundColor: UIColor = UIColor.white,
+        @ViewBuilder content: @escaping() -> Content,
+        dissmiss: @escaping ()->()
+    )-> some View {
+        
         return self
             .background(
                 PomuSheetManager(isPresented: isPresented, backgroundColor: backgroundColor, content: content(), dissmiss: dissmiss)
